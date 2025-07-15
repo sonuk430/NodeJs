@@ -9,6 +9,7 @@ app.use((req, res, next) => {
 
 app.get("/", (req, res) => {
   res.json(["Test.txt", "hello.png"]);
+  console.log(req);
 });
 
 // Server Start
