@@ -75,6 +75,19 @@ app.patch("/admin/:id", (req, res) => {
   }
 });
 
+// user addToKart item
+
+app.post("/user/:id", (req, res) => {
+  const id = parseInt(res.params.id);
+  const foodItem = foodMenu.find((item) => item.id === id);
+  if (foodItem) {
+    AddToCart.push(foodItem);
+    res.status(200).send("Item added successfully");
+  } else {
+    res.send("Item Out of stack");
+  }
+});
+
 app.listen(4000, () => {
   console.log("Server running on 4000");
 });
