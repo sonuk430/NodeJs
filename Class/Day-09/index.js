@@ -87,6 +87,25 @@ app.post("/user/:id", (req, res) => {
     res.send("Item Out of stack");
   }
 });
+// user delete item from addToCart
+app.delete("/user/:id", (req, res) => {
+  const id = parseInt(res.params.id);
+  const index = foodMenu.findIndex((item) => item.id === id);
+  if (index != -1) {
+    AddToCart.splice(index, 1);
+    send("Item Removed successfully");
+  } else {
+    res.send("Item is not present in Kart");
+  }
+});
+
+app.get("/user", (req, res) => {
+  if (AddToCart.length == 0) {
+    res.send("Cart is Empty");
+  } else {
+    res.send(AddToCart);
+  }
+});
 
 app.listen(4000, () => {
   console.log("Server running on 4000");
