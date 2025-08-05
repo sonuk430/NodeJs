@@ -1,13 +1,13 @@
 const express = require("express");
 const app = express();
-
 const tasks = require("./routes/tasks");
-const PORT = 8082;
+const connectDB = require("./db/connect");
+require("dotenv").config();
 
-// middleware
+// Middleware
 app.use(express.json());
 
-// routes
+// Routes
 app.get("/hello", (req, res) => {
   res.send("Task Manager App");
 });
@@ -15,6 +15,17 @@ app.get("/hello", (req, res) => {
 app.use("/api/v1/tasks", tasks);
 
 // Server Start
-app.listen(PORT, () => {
-  console.log(`Server is Running on Port${PORT}...`);
-});
+const PORT = 8082;
+
+const start = async () => {
+  try {
+    await connectDB(process.env.MONGO_URI);
+    app.listen(PORT, () => {
+      console.log(`Server is Running on Port ${PORT}...`);
+    });
+  } catch (error) {
+    console.log("Error connecting to DB:", error);
+  }
+};
+
+start();
