@@ -1,0 +1,77 @@
+[
+  {
+    "title": "Learn Express.js",
+    "content": "Created my first REST API with Express and MongoDB.",
+    "tags": ["express", "mongodb", "api"]
+  },
+  {
+    "title": "JavaScript Array Methods",
+    "content": "Practiced push, pop, shift, unshift, map, filter, and reduce methods today.",
+    "tags": ["javascript", "array", "practice"]
+  },
+  {
+    "title": "MongoDB Indexing",
+    "content": "Read about how to create and use indexes in MongoDB for faster query performance.",
+    "tags": ["mongodb", "database", "optimization"]
+  },
+  {
+    "title": "React Props and State",
+    "content": "Learned the difference between props and state in React components.",
+    "tags": ["react", "frontend", "javascript"]
+  },
+  {
+    "title": "Node.js File System",
+    "content": "Explored fs module for reading and writing files in Node.js.",
+    "tags": ["nodejs", "filesystem", "backend"]
+  },
+  {
+    "title": "Async/Await Practice",
+    "content": "Converted callback-based functions into async/await syntax for cleaner code.",
+    "tags": ["javascript", "async", "promises"]
+  },
+  {
+    "title": "CSS Flexbox",
+    "content": "Used flexbox to design a responsive navbar.",
+    "tags": ["css", "frontend", "design"]
+  },
+  {
+    "title": "Authentication with JWT",
+    "content": "Implemented login and signup API with JWT authentication.",
+    "tags": ["nodejs", "jwt", "authentication"]
+  },
+  {
+    "title": "Git Branching",
+    "content": "Practiced creating new branches, merging, and resolving conflicts in Git.",
+    "tags": ["git", "version-control", "practice"]
+  },
+  {
+    "title": "API Testing with Postman",
+    "content": "Tested CRUD operations of my Notes API in Postman.",
+    "tags": ["api", "postman", "testing"]
+  },
+  {
+    "title": "TypeScript Basics",
+    "content": "Explored type annotations, interfaces, and functions in TypeScript.",
+    "tags": ["typescript", "javascript", "typed"]
+  },
+  {
+    "title": "CSS Grid",
+    "content": "Designed a photo gallery layout using CSS Grid.",
+    "tags": ["css", "frontend", "design"]
+  },
+  {
+    "title": "MongoDB Aggregation",
+    "content": "Learned about $match, $group, and $sort in aggregation pipelines.",
+    "tags": ["mongodb", "database", "aggregation"]
+  },
+  {
+    "title": "Express Middleware",
+    "content": "Created custom middleware for logging requests in my Express app.",
+    "tags": ["express", "middleware", "backend"]
+  },
+  {
+    "title": "Error Handling in APIs",
+    "content": "Implemented centralized error handling in Express using middleware.",
+    "tags": ["express", "error-handling", "backend"]
+  }
+]
