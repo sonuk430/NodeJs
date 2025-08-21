@@ -16,7 +16,37 @@ app.post("/api/notes", async (req, res) => {
     await noteSchema.create(req.body);
     res.send({ message: "New Note Created" });
   } catch (error) {
-    console.log(error);
+    res.send(error.message);
+    // console.log(error);
+  }
+});
+
+app.patch("/api/notes/:id", async (req, res) => {
+  try {
+    const findNote = await noteSchema.findById(req.params.id);
+    res.send({ message: "Note Find Successfully", findNote });
+  } catch (error) {
+    res.send("Id not found");
+  }
+});
+
+app.delete("/api/notes/:id", async (req, res) => {
+  try {
+    const noteDelete = await noteSchema.findByIdAndDelete(req.params.id);
+
+    if (!noteDelete) {
+      return res.status(404).json({ message: "Note not found" });
+    }
+
+    res.json({
+      message: "Note deleted successfully",
+      note: noteDelete,
+    });
+  } catch (error) {
+    res.status(400).json({
+      message: "Invalid ID format",
+      error: error.message,
+    });
   }
 });
 
